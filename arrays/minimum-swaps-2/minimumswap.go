@@ -1,10 +1,4 @@
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println(minimumSwap([]int{1, 2, 3, 4, 6, 5}))
-}
+package minimumswap
 
 /*
 You are given an unordered array consisting of consecutive integers  [1, 2, 3, ..., n] without any duplicates.
@@ -12,14 +6,10 @@ You are allowed to swap any two elements.
 You need to find the minimum number of swaps required to sort the array in ascending order.
 */
 
-/*
-Solution:
-1. Store array with matched indicator in a hash ( map )
-2. If value - key match => This element already in correct position. Do not swap. Mask as visited
-3. If value - key does not match => swap position between
-*/
+//Complexity : O(n^2) || For each element, in worst case, you need to loop all n element => n*n
 
-func minimumSwap(arr []int) int {
+//MinimumSwap calcute number of cycles to sort number
+func MinimumSwap(arr []int) int {
 	var counter int                 //=> For counting number of swap
 	var hashArr = make(map[int]int) //=> store all given arr elements with their position/indicator
 
