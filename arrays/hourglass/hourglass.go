@@ -1,8 +1,6 @@
 package hourglass
 
-import (
-	"github.com/hangnhat57/go-algorithm/arrays/insertionsort"
-)
+import "github.com/hangnhat57/go-algorithm/arrays/insertionsort"
 
 func HourGlass(arr [][]int) int {
 	rows := len(arr)
